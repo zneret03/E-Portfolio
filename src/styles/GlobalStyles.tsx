@@ -39,7 +39,6 @@ const GlobalStyles = createGlobalStyle`
     color: var(--semi-black);
     line-height: 1.1;
 
-
     @media (max-width : 480px){
       font-weight: 800;
     }

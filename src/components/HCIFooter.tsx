@@ -7,6 +7,14 @@ const StyledFooter = styled.div`
   margin: 0 auto;
   text-align: center;
   color: var(--white);
+
+  @media (max-width: 1080px) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: 780px) {
+    padding-top: 80px;
+  }
 `;
 
 const HCIFooter: React.FC = () => {

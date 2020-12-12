@@ -4,6 +4,10 @@ import { Bubble, Sidebar, RightContent } from "./";
 import { useSpring } from "react-spring";
 import GlobalStyles from "../styles/GlobalStyles";
 
+if (typeof window != "undefined") {
+  require("smooth-scroll")('a[href*="#"]');
+}
+
 interface PropTypes {
   children: React.ReactNode;
 }

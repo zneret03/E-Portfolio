@@ -14,7 +14,7 @@ const StyledWrapper = styled.div<StyledTypes>`
   top: 0;
   bottom: 0;
   right: 0;
-  z-index: 10;
+  z-index: 20;
   background: #ffffff;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transition: var(--transition);
@@ -85,6 +85,10 @@ const Sidebar: React.FC<PropTypes> = ({ animatedSidebar }) => {
       name: "Home",
     },
     {
+      id: "#about",
+      name: "About",
+    },
+    {
       id: "#subjectModule",
       name: "Subject Module",
     },
@@ -100,7 +104,7 @@ const Sidebar: React.FC<PropTypes> = ({ animatedSidebar }) => {
           <ul>
             {links.map((link: any) => (
               <li key={link.id}>
-                <a>{link.name}</a>
+                <a href={link.id}>{link.name}</a>
               </li>
             ))}
           </ul>

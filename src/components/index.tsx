@@ -1,5 +1,6 @@
 export { default as LandingPage } from "./LandingPage";
 export { default as About } from "./About";
+export { default as Module } from "./Module";
 export { default as HCIFooter } from "./HCIFooter";
 
 export { default as Layout } from "./Layout";

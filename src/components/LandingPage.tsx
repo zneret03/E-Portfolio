@@ -44,7 +44,7 @@ const StyledLandingPage = styled.section`
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="background">
+    <div className="background" id="home">
       <StyledLandingPage>
         <div className="content">
           <h4>Subject</h4>

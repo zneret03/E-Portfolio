@@ -1,6 +1,6 @@
 import React from "react";
 import { GlobalProvider } from "./Context/GlobalProvider";
-import { Layout, LandingPage, About, HCIFooter } from "./components";
+import { Layout, LandingPage, About, Module, HCIFooter } from "./components";
 
 const App: React.FC = () => {
   return (
@@ -8,6 +8,7 @@ const App: React.FC = () => {
       <Layout>
         <LandingPage />
         <About />
+        <Module />
         <HCIFooter />
       </Layout>
     </GlobalProvider>
