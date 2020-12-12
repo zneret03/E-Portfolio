@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../Context/GlobalProvider";
-import { Bubble, Sidebar, RightContent } from "./";
+import { Sidebar, RightContent, HCIFooter } from "./";
 import { useSpring } from "react-spring";
-import GlobalStyles from "../styles/GlobalStyles";
 
 if (typeof window != "undefined") {
   require("smooth-scroll")('a[href*="#"]');
@@ -22,10 +21,9 @@ const App: React.FC<PropTypes> = ({ children }) => {
 
   return (
     <>
-      <GlobalStyles />
-      <Bubble />
       <Sidebar animatedSidebar={animatedSidebar} />
       <RightContent>{children}</RightContent>
+      <HCIFooter />
     </>
   );
 };

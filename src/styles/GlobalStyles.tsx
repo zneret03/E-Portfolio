@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import TranstionStyles from "./TransitionStyles";
 
 const GlobalStyles = createGlobalStyle`
+  ${TranstionStyles}
     body {
         padding : 0;
         margin : 0;
@@ -109,24 +111,44 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .big-heading {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 80px);
+  }
 
+  .subtitle {
+    color: var(--white);
+    margin: 0 0 20px 0;
+    font-size: var(--fz-md);
+    font-family: var(--font-mono);
+    font-weight: 400;
+    line-height: 1.5;
+
+    @media (max-width: 1080px) {
+      font-size: var(--fz-sm);
+    }
+
+    @media (max-width: 768px) {
+      font-size: var(--fz-xs);
+    }
+  }
 
   section {
     margin : 0 auto;
     max-width: 1100px;
-    padding: 0 0 250px;
+    padding: 0 0 200px;
     transition: var(--transition);
 
     @media (max-width: 1080px) {
-      padding: 0 50px 200px;
+      padding: 0 100px 90px;
     }
 
     @media (max-width: 768px) {
-      padding: 0 25px 180px;
+      padding: 0 80px 60px;
     }
 
     @media (max-width: 495px) {
-      padding: 0 20px 170px;
+      padding: 0 60px 30px;
     }                 
   }
 `;

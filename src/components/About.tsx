@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import AosInit from "./utils/aos";
 
 const StyledAboutSection = styled.section`
   max-width: 1000px;
+  margin-bottom: 150px;
 
   @media (max-width: 1080px) {
     padding: 0px 90px;
+    margin-bottom: 100px;
   }
 
   @media (max-width: 768px) {
     padding: 0px 60px;
+    margin-bottom: 80x;
   }
 
   @media (max-width: 492px) {
     padding: 0px 30px;
+    margin-bottom: 60px;
   }
 
   .inner {
@@ -71,6 +76,8 @@ const StyledPic = styled.div`
 `;
 
 const About = () => {
+  useEffect(AosInit, []);
+
   return (
     <StyledAboutSection data-aos="fade-up" id="about">
       <div className="inner">

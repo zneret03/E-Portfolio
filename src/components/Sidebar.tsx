@@ -92,6 +92,10 @@ const Sidebar: React.FC<PropTypes> = ({ animatedSidebar }) => {
       id: "#subjectModule",
       name: "Subject Module",
     },
+    {
+      id: "/Archive",
+      name: "Module Archive",
+    },
   ];
 
   return (
