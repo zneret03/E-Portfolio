@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import Menu from "./icons/Menu";
+import { Menu } from "./icons";
 import styled from "styled-components";
 import { GlobalContext } from "../Context/GlobalProvider";
 

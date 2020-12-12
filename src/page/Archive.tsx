@@ -3,7 +3,7 @@ import AosInit from "../components/utils/aos";
 import { HCIFooter } from "../components";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import External from "../components/icons/External";
+import { External } from "../components/icons";
 import { OtherProjects } from "../components/utils/config";
 
 const StyledArchive = styled.div`
