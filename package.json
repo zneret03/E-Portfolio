@@ -39,5 +39,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.5",
+    "react-feather": "^2.0.9",
+    "react-particles-js": "^3.4.1",
+    "react-spring": "^8.0.27",
+    "styled-components": "^5.2.1"
   }
 }
