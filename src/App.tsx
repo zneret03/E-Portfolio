@@ -3,8 +3,9 @@ import Home from "./page/Home";
 import Archive from "./page/Archive";
 import GlobalStyles from "./styles/GlobalStyles";
 import { GlobalProvider } from "./Context/GlobalProvider";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Bubble } from "./components";
+import ScrollToTop from "./components/utils/ScrollToTop";
 
 const App: React.FC = () => {
   return (
@@ -12,8 +13,12 @@ const App: React.FC = () => {
       <GlobalStyles />
       <Bubble />
       <Router>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/Archive" component={Archive} />
+        <ScrollToTop>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/Archive" component={Archive} />
+          </Switch>
+        </ScrollToTop>
       </Router>
     </GlobalProvider>
   );
