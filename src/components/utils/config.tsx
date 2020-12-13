@@ -38,11 +38,11 @@ const OtherProjects = [
     projectYear: 2020,
     projectName: "Module 4",
     projectMadeAt: null,
-    projectTitle: "Human-Computer Paradigms",
+    projectTitle: "Human-Computer Interaction Paradigms",
     demo: "/static/Module4/Module4.pdf",
     projectDescription:
       "With the rapid change of modern computing technologies, it is essential to study the history of interactive system design that promotes paradigms for maximum usability. Thus, the principles and theoretical models for interaction will be explored by the students for them to come up with a successful design",
-    projectTechnology: ["Computing", "Modern", "Tecnologies"],
+    projectTechnology: ["Computing", "Tecnologies"],
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const OtherProjects = [
     projectName: "Module 5",
     projectMadeAt: "Paper Book & Ebook",
     projectAssignment: "/static/Module5/Module5_Assignment.docx",
-    projectTitle: "Conceptualize Interaction",
+    projectTitle: "Understanding and Conceptualizing Interaction",
     demo: "/static/Module5/UNDERSTANDING-and-CONCEPTUALIZING-INTERACTION.pdf",
     projectDescription:
       "Explain what is meant by the problem space, how to conceptualize interaction, describe what a conceptual model is and how it begin to formulate one",
@@ -61,7 +61,7 @@ const OtherProjects = [
     projectYear: 2020,
     projectName: "Module 6 Design Rules",
     projectMadeAt: null,
-    projectTitle: "Human Computer Interaction",
+    projectTitle: "Human Computer Interaction Design Rules",
     demo: "/static/Module6/Design_Rules.pdf",
     projectDescription:
       "Require design rules, which are rules a designer can follow in order to increase the usability of the eventual software product. We can classify these rules along two dimensional based on the rule's authority and generality",
