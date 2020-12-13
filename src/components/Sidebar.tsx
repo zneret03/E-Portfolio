@@ -37,13 +37,13 @@ const StyledSidebar = styled.div`
     margin: 0;
     width: 100%;
     text-align: center;
-    margin: 70px auto;
+    margin: 50px auto;
 
     li {
       cursor: pointer;
       list-style: none;
       position: relative;
-      margin: 0 auto 80px;
+      margin: 0 auto 63px;
       counter-increment: item 1;
 
       &:before {
@@ -87,6 +87,10 @@ const Sidebar: React.FC<PropTypes> = ({ animatedSidebar }) => {
     {
       id: "#about",
       name: "About",
+    },
+    {
+      id: "https://drilon7.vercel.app/",
+      name: "Creator",
     },
     {
       id: "#subjectModule",
