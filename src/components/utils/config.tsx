@@ -1,48 +1,3 @@
-const information = [
-  {
-    id: 1,
-    title: "Top 10 Human Computer Interaction Prototypes",
-    description:
-      "This module introduces the fundamental components of an interactive system like the human user, the computer system itself, and the nature of the interactive process",
-    word: ["Interaction", "Compotuer", "Fundamentals"],
-  },
-  {
-    id: 2,
-    title: "Top 10 Human Computer Interaction Prototypes",
-    description:
-      "A custom build shopify, that will show case your fullstack skills and front end designing in different technology",
-    word: ["Prototype", "Technology"],
-  },
-  {
-    id: 3,
-    title: "Top 10 Human Computer Interaction Prototypes",
-    description:
-      "A custom build shopify, that will show case your fullstack skills and front end designing in different technology",
-    word: ["Prototype", "Technology"],
-  },
-  {
-    id: 4,
-    title: "Top 10 Human Computer Interaction Prototypes",
-    description:
-      "A custom build shopify, that will show case your fullstack skills and front end designing in different technology",
-    word: ["Prototype", "Technology"],
-  },
-  {
-    id: 5,
-    title: "Top 10 Human Computer Interaction Prototypes",
-    description:
-      "A custom build shopify, that will show case your fullstack skills and front end designing in different technology",
-    word: ["Prototype", "Technology"],
-  },
-  {
-    id: 6,
-    title: "Top 10 Human Computer Interaction Prototypes",
-    description:
-      "A custom build shopify, that will show case your fullstack skills and front end designing in different technology",
-    word: ["Prototype", "Technology"],
-  },
-];
-
 const OtherProjects = [
   {
     id: 1,
@@ -53,7 +8,7 @@ const OtherProjects = [
     demo: "/static/Module1/Module1.pdf",
     projectDescription:
       "This module introduces the fundamental components of an interactive system like the human user, the computer system itself, and the nature of the interactive process",
-    projectTechnology: ["Interaction", "Compotuer", "Fundamentals"],
+    projectTechnology: ["Interaction", "Compotuer"],
   },
   {
     id: 2,
@@ -65,7 +20,7 @@ const OtherProjects = [
     demo: "/static/Module2/Module2.pdf",
     projectDescription:
       "This module introduces the common styles use in Human Computer Interaction related to design and of the prototypes for the technology that involves Human-Computer Interaction (HCI)",
-    projectTechnology: ["Styles", "Human", "Computer"],
+    projectTechnology: ["Styles", "Human"],
   },
   {
     id: 3,
@@ -161,4 +116,4 @@ const OtherProjects = [
   },
 ];
 
-export { information, OtherProjects };
+export { OtherProjects };

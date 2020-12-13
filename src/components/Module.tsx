@@ -107,7 +107,7 @@ const StyledProject = styled.div`
       margin: 0 0 15px;
       line-height: 28px;
       color: var(--semi-black);
-      font-size: var(--fz-xl);
+      font-size: clamp(15, 4vw, var(--fz-xl));
 
       @media (max-width: 1080px) {
         font-size: var(--fz-lg);
