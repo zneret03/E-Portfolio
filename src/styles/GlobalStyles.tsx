@@ -147,8 +147,8 @@ const GlobalStyles = createGlobalStyle`
       padding: 0 80px 60px;
     }
 
-    @media (max-width: 495px) {
-      padding: 0 60px 30px;
+    @media (max-width: 480px) {
+      padding: 0 20px 30px;
     }                 
   }
 `;

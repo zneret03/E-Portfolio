@@ -58,7 +58,7 @@ const StyledModuleWrapper = styled.section`
   .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 40px;
+    grid-gap: 35px;
     position: relative;
     margin-top: 50px;
 
@@ -85,7 +85,7 @@ const StyledProject = styled.div`
     box-shadow: 0 10px 30px -15px var(--white);
     transition: var(--transition);
     position: relative;
-    height: 100%;
+    height: 300px;
     padding: 2rem 2.1rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
