@@ -6,7 +6,16 @@ const StyledFooter = styled.div`
   max-width: 250px;
   margin: 0 auto;
   text-align: center;
-  color: var(--white);
+
+  a {
+    text-decoration: none;
+    color: var(--white);
+
+    &:hover,
+    &:focus {
+      color: var(--semi-black);
+    }
+  }
 
   @media (max-width: 1080px) {
     padding-top: 100px;
@@ -20,7 +29,9 @@ const StyledFooter = styled.div`
 const HCIFooter: React.FC = () => {
   return (
     <StyledFooter>
-      <span>Created By Ian A. Drilon BSCS 3B</span>
+      <a href="https://github.com/zneret03/E-Portfolio">
+        <span>Created By Ian A. Drilon BSCS 3B</span>
+      </a>
     </StyledFooter>
   );
 };
