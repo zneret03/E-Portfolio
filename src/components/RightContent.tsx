@@ -1,21 +1,35 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Menu } from "./icons";
+import { Menu, Moon, Sun } from "./icons";
+import { Switch } from "antd";
 import styled from "styled-components";
 import { GlobalContext } from "../Context/GlobalProvider";
 
 const StyledRightContent = styled.div`
   transition: var(--transition);
+  display: flex;
+  align-items: center;
+  padding: 45px 60px 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+
   svg {
     cursor: pointer;
-    fill: var(--semi-black);
+    fill: var(--white);
+  }
+
+  span {
+    z-index: 20;
+    margin-right: 20px;
+    display: block;
+
+    @media (max-width: 748px) {
+      display: none;
+    }
   }
 
   .Menu {
-    padding: 45px 60px 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-
     @media (max-width: 748px) {
       padding: 50px 40px 0;
     }
@@ -34,6 +48,7 @@ const StyledRightContent = styled.div`
     background-color: #fff;
     width: 100%;
     z-index: 10;
+
     svg {
       padding: 0 20px;
       float: right;
@@ -46,15 +61,23 @@ interface PropTypes {
 }
 
 const RightContent: React.FC<PropTypes> = ({ children }) => {
-  const { dispatch, toggleSide } = useContext(GlobalContext);
+  const { dispatch1, toggleSide, DarkState, dispatch2 } = useContext(
+    GlobalContext
+  );
 
   const toggleSidebar = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     event.preventDefault();
 
-    dispatch({ type: "toggleSide", payload: { isToggle: !toggleSide } });
+    dispatch1({ type: "toggleSide", payload: { isToggle: !toggleSide } });
   };
+
+  const changeDarkTheme = () => {
+    dispatch2({ type: "isDark", payload: { isDark: !DarkState } });
+  };
+
+  console.log(DarkState);
 
   const [sticky, setSticky] = useState(false);
 
@@ -75,8 +98,20 @@ const RightContent: React.FC<PropTypes> = ({ children }) => {
 
   return (
     <>
-      <StyledRightContent onClick={(event) => toggleSidebar(event)}>
-        <div className={`${sticky ? "Nav" : "Menu"}`} style={{ opacity: 1 }}>
+      <StyledRightContent>
+        <span>
+          <Switch
+            style={{ zIndex: 10 }}
+            onClick={changeDarkTheme}
+            checkedChildren={<Moon />}
+            unCheckedChildren={<Sun />}
+          />
+        </span>
+        <div
+          onClick={(event) => toggleSidebar(event)}
+          className={`${sticky ? "Nav" : "Menu"}`}
+          style={{ opacity: 1 }}
+        >
           <Menu />
         </div>
       </StyledRightContent>

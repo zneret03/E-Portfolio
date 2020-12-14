@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
 import AosInit from "./utils/aos";
+import { GlobalContext } from "../Context/GlobalProvider";
 
 const StyledAboutSection = styled.section`
   max-width: 1000px;
@@ -76,13 +77,14 @@ const StyledPic = styled.div`
 `;
 
 const About = () => {
+  const { darkTheme } = useContext(GlobalContext);
   useEffect(AosInit, []);
 
   return (
     <StyledAboutSection data-aos="fade-up" id="about">
       <div className="inner">
         <StyledText>
-          <h2 className="numbered-heading">What is HCI?</h2>
+          <h2 className={`numbered-heading ${darkTheme}`}>What is HCI?</h2>
           <p>
             Human–computer interaction studies the design and use of computer
             technology, focused on the interfaces between people and computers.

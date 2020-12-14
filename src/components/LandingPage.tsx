@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { GlobalContext } from "../Context/GlobalProvider";
 import styled from "styled-components";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
@@ -45,6 +46,7 @@ const StyledLandingPage = styled.section`
 `;
 
 const LandingPage: React.FC = () => {
+  const { darkTheme } = useContext(GlobalContext);
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -57,11 +59,11 @@ const LandingPage: React.FC = () => {
 
   const one = <h4>Subject</h4>;
 
-  const two = <h1>human</h1>;
+  const two = <h1 className={`${darkTheme}`}>human</h1>;
 
-  const three = <h1>computer</h1>;
+  const three = <h1 className={`${darkTheme}`}>computer</h1>;
 
-  const four = <h1>interaction</h1>;
+  const four = <h1 className={`${darkTheme}`}>interaction</h1>;
 
   const five = <span>a bridge of solutions for a complex connections </span>;
 

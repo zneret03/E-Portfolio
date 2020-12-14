@@ -15,13 +15,13 @@ const StyledWrapper = styled.div<StyledTypes>`
   bottom: 0;
   right: 0;
   z-index: 20;
-  background: #ffffff;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transition: var(--transition);
 `;
 
 const StyledSidebar = styled.div`
   border: 0;
+  height: 650px;
   width: min(65vw, 350px);
 
   .close {
@@ -43,7 +43,7 @@ const StyledSidebar = styled.div`
       cursor: pointer;
       list-style: none;
       position: relative;
-      margin: 0 auto 63px;
+      margin: 0 auto 50px;
       counter-increment: item 1;
 
       &:before {
@@ -72,11 +72,11 @@ interface PropTypes {
 }
 
 const Sidebar: React.FC<PropTypes> = ({ animatedSidebar }) => {
-  const { toggleSide, dispatch } = useContext(GlobalContext);
+  const { toggleSide, dispatch1, darkTheme } = useContext(GlobalContext);
 
   const toggleClose = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.preventDefault();
-    dispatch({ type: "toggleSide", payload: { isToggle: !toggleSide } });
+    dispatch1({ type: "toggleSide", payload: { isToggle: !toggleSide } });
   };
 
   const links = [
@@ -105,7 +105,7 @@ const Sidebar: React.FC<PropTypes> = ({ animatedSidebar }) => {
   return (
     <StyledWrapper toggleSide={toggleSide}>
       <animated.div style={animatedSidebar}>
-        <StyledSidebar>
+        <StyledSidebar className={`${darkTheme}`}>
           <div className="close" onClick={(event) => toggleClose(event)}>
             <X />
           </div>

@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { GlobalContext } from "../Context/GlobalProvider";
 import AosInit from "./utils/aos";
 import styled from "styled-components";
 import { Folder } from "./icons";
@@ -81,11 +82,10 @@ const StyledProject = styled.div`
   }
 
   .project-inner {
-    background: #ffffff;
-    box-shadow: 0 10px 30px -15px var(--white);
+    box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.2);
     transition: var(--transition);
     position: relative;
-    height: 300px;
+    height: 380px;
     padding: 2rem 2.1rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
@@ -106,8 +106,7 @@ const StyledProject = styled.div`
     .title {
       margin: 0 0 15px;
       line-height: 28px;
-      color: var(--semi-black);
-      font-size: clamp(15, 4vw, var(--fz-xl));
+      font-size: clamp(15px, 4vw, var(--fz-lg));
 
       @media (max-width: 1080px) {
         font-size: var(--fz-lg);
@@ -148,6 +147,7 @@ const StyledProject = styled.div`
 `;
 
 const Module: React.FC = () => {
+  const { darkTheme } = useContext(GlobalContext);
   const GRID_LIMIT = 6;
   const firstSix = OtherProjects.slice(0, GRID_LIMIT);
 
@@ -164,7 +164,7 @@ const Module: React.FC = () => {
 
   return (
     <StyledModuleWrapper id="subjectModule">
-      <h1 className="numbered-heading">Subject Module</h1>
+      <h1 className={`${darkTheme} numbered-heading`}>Subject Module</h1>
       <div className="project-grid">
         {firstSix &&
           firstSix.map((info: any) => (
@@ -172,7 +172,7 @@ const Module: React.FC = () => {
               onClick={(event) => redirectPDF(event, info.demo)}
               data-aos="fade-up"
             >
-              <div className="project-inner">
+              <div className={`project-inner ${darkTheme}`}>
                 <header>
                   <div className="project-top">
                     <div className="folder">
@@ -180,7 +180,7 @@ const Module: React.FC = () => {
                     </div>
                   </div>
 
-                  <h3 className="title">{info.projectTitle}</h3>
+                  <h3 className={`title ${darkTheme}`}>{info.projectTitle}</h3>
 
                   <div
                     className="description"
@@ -202,7 +202,7 @@ const Module: React.FC = () => {
           ))}
       </div>
       <button className="more-button" data-aos="fade-up">
-        <Link to="/Archive">Show Archive</Link>
+        <Link to="/Archive?name=archive">Show Archive</Link>
       </button>
     </StyledModuleWrapper>
   );

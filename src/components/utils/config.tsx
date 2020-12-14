@@ -50,7 +50,7 @@ const OtherProjects = [
     projectName: "Module 5",
     projectMadeAt: "Paper Book & Ebook",
     projectAssignment: "/static/Module5/Module5_Assignment.docx",
-    projectTitle: "Understanding and Conceptualizing Interaction",
+    projectTitle: "Conceptualizing Interaction",
     demo: "/static/Module5/UNDERSTANDING-and-CONCEPTUALIZING-INTERACTION.pdf",
     projectDescription:
       "Explain what is meant by the problem space, how to conceptualize interaction, describe what a conceptual model is and how it begin to formulate one",

@@ -1,12 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 import TranstionStyles from "./TransitionStyles";
-
+import { dark, light } from "./Theme";
 const GlobalStyles = createGlobalStyle`
   ${TranstionStyles}
     body {
         padding : 0;
         margin : 0;
         font-family : var(--font-mono);
+
+        &.dark {
+          background : ${dark.background};
+        }
     }
 
     :root {
@@ -35,11 +39,22 @@ const GlobalStyles = createGlobalStyle`
         --transform : translateY(-10px);
     }
 
+    .light {
+      color : var(--semi-black);
+      background : #ffffff;
+    }
+
+    .dark {
+      background : ${dark.background};
+      color : ${light.color};
+    }
+
     h1,h2,h3,h4,h5,h6{
     margin: 0 0 10px 0;
     font-weight: 600;
     color: var(--semi-black);
     line-height: 1.1;
+
 
     @media (max-width : 480px){
       font-weight: 800;

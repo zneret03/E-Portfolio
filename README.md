@@ -17,6 +17,7 @@ I bulit this react + styled-components web design for my project in Human-Comput
 - [reactjs](https://reactjs.org/)
 - [styled-components](https://styled-components.com/)
 - [particles.js](https://vincentgarreau.com/particles.js/)
+- [react-spring](https://www.react-spring.io/)
 
 ### Getting Started
 

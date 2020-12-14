@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { GlobalContext } from "../Context/GlobalProvider";
 import AosInit from "../components/utils/aos";
-import { HCIFooter } from "../components";
+import { Layout } from "../components";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { External } from "../components/icons";
@@ -88,6 +89,7 @@ const StyledArchive = styled.div`
         width: 25px;
         height: 25px;
         margin-left: 10px;
+
         &:hover {
           fill: var(--green);
         }
@@ -155,80 +157,79 @@ const StyledArchive = styled.div`
   }
 `;
 
-const Archive = () => {
+const Archive: React.FC = () => {
+  const { darkTheme } = useContext(GlobalContext);
+
   useEffect(AosInit, []);
   return (
-    <>
-      <div className="container">
-        <StyledArchive>
-          <Link to="/">
-            <h4>Back</h4>
-          </Link>
-          <header>
-            <h2 className="big-heading">Archive</h2>
-            <p className="subtitle">
-              A big list of Human Computer Interaction Modules
-            </p>
-          </header>
-          <div>
-            <table>
-              <thead>
-                <th>Year</th>
-                <th>Title</th>
-                <th className="hide-on-mobile">Assignments</th>
-                <th className="hide-on-mobile">Module Content</th>
-                <th colSpan={2}>Preview</th>
-              </thead>
-              <tbody>
-                {OtherProjects.map((project: any) => (
-                  <tr key={project.id} data-aos="fade-up">
-                    <td className="overline year">{project.projectYear}</td>
-                    <td className="title">{project.projectName}</td>
-                    <td className="company hide-on-mobile">
-                      {project.projectMadeAt ? (
-                        <a
-                          href={project.projectAssignment}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <span>{project.projectMadeAt}</span>
-                        </a>
-                      ) : (
-                        <span>—</span>
-                      )}
-                    </td>
+    <Layout>
+      <StyledArchive>
+        <Link to="/">
+          <h4 className={`${darkTheme}`}>Back</h4>
+        </Link>
+        <header>
+          <h2 className={`${darkTheme} big-heading`}>Archive</h2>
+          <p className="subtitle">
+            A big list of Human Computer Interaction Modules
+          </p>
+        </header>
+        <div>
+          <table>
+            <thead>
+              <th>Year</th>
+              <th>Title</th>
+              <th className="hide-on-mobile">Assignments</th>
+              <th className="hide-on-mobile">Module Content</th>
+              <th colSpan={2}>Preview</th>
+            </thead>
+            <tbody>
+              {OtherProjects.map((project: any) => (
+                <tr key={project.id} data-aos="fade-up">
+                  <td className="overline year">{project.projectYear}</td>
+                  <td className="title">{project.projectName}</td>
+                  <td className="company hide-on-mobile">
+                    {project.projectMadeAt ? (
+                      <a
+                        href={project.projectAssignment}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span>{project.projectMadeAt}</span>
+                      </a>
+                    ) : (
+                      <span>—</span>
+                    )}
+                  </td>
 
-                    <td className="tech hide-on-mobile">
-                      {project.projectTechnology.map(
-                        (tech: any, index: number) => (
-                          <span key={index}>
-                            {tech}
-                            {index !== tech.length && (
-                              <span className="separator">&middot;</span>
-                            )}
-                          </span>
-                        )
-                      )}
-                    </td>
+                  <td className="tech hide-on-mobile">
+                    {project.projectTechnology.map(
+                      (tech: any, index: number) => (
+                        <span key={index}>
+                          {tech}
+                          {index !== tech.length && (
+                            <span className="separator">&middot;</span>
+                          )}
+                        </span>
+                      )
+                    )}
+                  </td>
 
-                    <td className="links">
-                      <div className="links-flex">
-                        <a href={project.demo} target="_blank" rel="noreferrer">
-                          <span aria-label="External Link">
-                            <External />
-                          </span>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </StyledArchive>
-      </div>
-      <HCIFooter />
-    </>
+                  <td className="links">
+                    <div className="links-flex">
+                      <a href={project.demo} target="_blank" rel="noreferrer">
+                        <span aria-label="External Link">
+                          <External />
+                        </span>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </StyledArchive>
+    </Layout>
   );
 };
 
