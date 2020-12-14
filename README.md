@@ -1,6 +1,6 @@
 # E-Portfolio
 
-I bulit this react + styled-components web design for my project in Human-Computer Technology and making designing modern design, with
+I bulit this react + styled-components web design for my project in Human-Computer Technology a E-Portfolio compilation of all the projects, outputs and pdfs we have. I really think that this design is very suitable with that type of archive documents
 
 ![demo](https://github.com/zneret03/E-Portfolio/blob/main/public/static/image-preview/LandinPage.png)
 
