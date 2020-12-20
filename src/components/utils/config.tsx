@@ -70,7 +70,7 @@ const OtherProjects = [
   {
     id: 7,
     projectYear: 2020,
-    projectName: "Implementation Support 7",
+    projectName: "Implementation in HCI",
     projectMadeAt: null,
     projectTitle: "Implementation Support",
     demo: "/static/Module7/Implementation_Support.pdf",
@@ -93,7 +93,7 @@ const OtherProjects = [
   {
     id: 9,
     projectYear: 2020,
-    projectName: "Implementation Support 9",
+    projectName: "Evaluation Techniques",
     projectMadeAt: null,
     projectTitle: "Evaluation Techniques",
     demo:
@@ -105,7 +105,7 @@ const OtherProjects = [
   {
     id: 10,
     projectYear: 2020,
-    projectName: "Implementation Support 10 ",
+    projectName: "Universal Design",
     projectMadeAt: null,
     projectTitle: "Universal design principles",
     demo:
