@@ -40,7 +40,7 @@ const StyledSidebar = styled.div`
       cursor: pointer;
       list-style: none;
       position: relative;
-      margin: 0 auto 70px;
+      margin: 0 auto 60px;
       counter-increment: item 1;
 
       &:before {
