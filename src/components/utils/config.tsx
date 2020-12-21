@@ -133,8 +133,18 @@ const OtherProjects = [
     projectTitle: "HCI Social Interaction",
     demo: "/static/Social_Interaction/SOCIAL_INTERACTION.pdf",
     projectDescription:
-      "Explain what is meant by social interaction.◆Describe the social mechanisms that are used by people when communicating and collaborating.◆Discuss how social media have changed the ways in which we keep in touch, make contact, and manage our social and working lives.",
+      "Explain what is meant by social interaction. Describe the social mechanisms that are used by people when communicating and collaborating. Discuss how social media have changed the ways in which we keep in touch, make contact, and manage our social and working lives.",
     projectTechnology: ["Interaction", "Mechanism", "Working"],
+  },
+  {
+    id: 13,
+    projectYear: 2020,
+    projectName: "HCI Syllable",
+    projectMadeAt: null,
+    projectTitle: "Human-Computer Interaction Sylabble",
+    demo: "/static/Syllable/Syllable.pdf",
+    projectDescription: "Human-Computer Interaction Sylabble",
+    projectTechnology: ["Guide", "Introduction"],
   },
 ];
 
