@@ -114,6 +114,28 @@ const OtherProjects = [
       "Equatable use, Flexibility in use, Simple and intuitive to use, Perceptible information, Tolerance for error, Low physical Effort, Size and space for approaching and use",
     projectTechnology: ["Flexibility", "Information", "Tolerance"],
   },
+  {
+    id: 11,
+    projectYear: 2020,
+    projectName: "Interfaces",
+    projectMadeAt: null,
+    projectTitle: "HCI Interfaces",
+    demo: "/static/Interfaces/INTERFACES.pdf",
+    projectDescription:
+      "Human-computer interaction studies the design and use of computer technology, focuses on the interfaces between people and computers. Research field of HCI observe the ways in which human interact with computers",
+    projectTechnology: ["Command", "GUI"],
+  },
+  {
+    id: 12,
+    projectYear: 2020,
+    projectName: "Social Interaction",
+    projectMadeAt: null,
+    projectTitle: "HCI Social Interaction",
+    demo: "/static/Social_Interaction/SOCIAL_INTERACTION.pdf",
+    projectDescription:
+      "Explain what is meant by social interaction.◆Describe the social mechanisms that are used by people when communicating and collaborating.◆Discuss how social media have changed the ways in which we keep in touch, make contact, and manage our social and working lives.",
+    projectTechnology: ["Interaction", "Mechanism", "Working"],
+  },
 ];
 
 export { OtherProjects };

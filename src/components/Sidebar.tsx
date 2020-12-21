@@ -4,16 +4,13 @@ import styled from "styled-components";
 import { animated } from "react-spring";
 import { X } from "react-feather";
 
-interface StyledTypes {
-  toggleSide: boolean;
-}
-
-const StyledWrapper = styled.div<StyledTypes>`
+const StyledWrapper = styled.div`
   overflow: auto;
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
+  background: #fff;
   z-index: 20;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transition: var(--transition);
@@ -21,7 +18,6 @@ const StyledWrapper = styled.div<StyledTypes>`
 
 const StyledSidebar = styled.div`
   border: 0;
-  height: 650px;
   width: min(65vw, 350px);
 
   .close {
@@ -36,6 +32,7 @@ const StyledSidebar = styled.div`
     padding: 0;
     margin: 0;
     width: 100%;
+    height: auto;
     text-align: center;
     margin: 50px auto;
 
@@ -43,7 +40,7 @@ const StyledSidebar = styled.div`
       cursor: pointer;
       list-style: none;
       position: relative;
-      margin: 0 auto 50px;
+      margin: 0 auto 70px;
       counter-increment: item 1;
 
       &:before {
@@ -103,7 +100,7 @@ const Sidebar: React.FC<PropTypes> = ({ animatedSidebar }) => {
   ];
 
   return (
-    <StyledWrapper toggleSide={toggleSide}>
+    <StyledWrapper>
       <animated.div style={animatedSidebar}>
         <StyledSidebar className={`${darkTheme}`}>
           <div className="close" onClick={(event) => toggleClose(event)}>
